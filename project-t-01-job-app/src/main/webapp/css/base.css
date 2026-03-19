@@ -1,0 +1,66 @@
+:root {
+    --base-max-width: 1920px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--clr-background-light) !important;
+    color: var(--clr-text-primary);
+}
+
+/* HERE STARTS CSS APP */
+main {
+    padding-block: 16px;
+}
+
+.base-section {
+    width: 100%;
+    max-width: var(--base-max-width);
+    margin: 0 auto;
+    height: 100%;
+}
+
+.the-header {
+    height: 56px;
+    background-color: var(--clr-background-dark);
+    color: var(--clr-text-invert);
+}
+
+.the-header h6 {
+    font-weight: 700;
+}
+
+.base-nav-item {
+    color: var(--clr-text-invert);
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.base-nav-item > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    height: 100%;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+}
+
+.base-nav-item:hover {
+    color: var(--clr-primary);
+    border-bottom-color: var(--clr-primary);
+}
