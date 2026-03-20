@@ -8,7 +8,7 @@ In-memory fullstack job app demo
 - View all jobs.
 
 ## Demo
-![Demo de mi proyecto](/assets/demo.gif)
+![Demo de mi proyecto](./assets/demo.gif)
 
 ---
 *Note: Original concept inspired by the [Telusko](https://www.udemy.com/course/spring-framework-boot/) course.*
