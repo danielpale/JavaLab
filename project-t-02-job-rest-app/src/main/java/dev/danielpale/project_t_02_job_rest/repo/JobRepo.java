@@ -1,6 +1,6 @@
-package dev.danielpale.project_t_01_job.repo;
+package dev.danielpale.project_t_02_job_rest.repo;
 
-import dev.danielpale.project_t_01_job.model.JobPost;
+import dev.danielpale.project_t_02_job_rest.model.JobPost;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Arrays;

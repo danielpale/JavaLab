@@ -1,4 +1,4 @@
-package dev.danielpale.project_t_01_job.model;
+package dev.danielpale.project_t_02_job_rest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

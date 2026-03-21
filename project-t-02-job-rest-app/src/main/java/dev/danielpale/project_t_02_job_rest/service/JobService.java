@@ -1,7 +1,7 @@
-package dev.danielpale.project_t_01_job.service;
+package dev.danielpale.project_t_02_job_rest.service;
 
-import dev.danielpale.project_t_01_job.model.JobPost;
-import dev.danielpale.project_t_01_job.repo.JobRepo;
+import dev.danielpale.project_t_02_job_rest.model.JobPost;
+import dev.danielpale.project_t_02_job_rest.repo.JobRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
