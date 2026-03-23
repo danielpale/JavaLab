@@ -3,9 +3,7 @@ package dev.danielpale.project_t_02_job_rest;
 import dev.danielpale.project_t_02_job_rest.model.JobPost;
 import dev.danielpale.project_t_02_job_rest.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +16,28 @@ public class JobRestController {
     @GetMapping("jobs")
     public List<JobPost> getAllJobs() {
         return service.getAllJobs();
+    }
+
+    @GetMapping("job/{jobId}")
+    public JobPost getJob(@PathVariable int jobId) {
+        return service.getJob(jobId);
+    }
+
+    @PostMapping("job")
+    public JobPost addJob(@RequestBody JobPost jobPost) {
+        service.addJob(jobPost);
+        return service.getJob(jobPost.getPostId());
+    }
+
+    @PutMapping("job")
+    public JobPost updateJob(@RequestBody JobPost jobPost) {
+        service.updateJob(jobPost);
+        return service.getJob(jobPost.getPostId());
+    }
+
+    @DeleteMapping("job/{jobId}")
+    public String deleteJob(@PathVariable int jobId) {
+        service.deleteJob(jobId);
+        return "Deleted";
     }
 }

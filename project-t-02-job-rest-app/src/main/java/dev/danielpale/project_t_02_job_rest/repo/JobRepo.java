@@ -2,6 +2,7 @@ package dev.danielpale.project_t_02_job_rest.repo;
 
 import dev.danielpale.project_t_02_job_rest.model.JobPost;
 import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,5 +24,27 @@ public class JobRepo {
     public void addJob(JobPost job) {
         jobs.add(job);
         System.out.println(jobs);
+    }
+
+    public JobPost getJob(int jobId) {
+        for (JobPost job : jobs) {
+            if (job.getPostId() == jobId) return job;
+        }
+        return null;
+    }
+
+    public void updateJob(JobPost job) {
+        for (JobPost _job : jobs) {
+            if (_job.getPostId() == job.getPostId()) {
+                _job.setPostProfile(job.getPostProfile());
+                _job.setPostDesc(job.getPostDesc());
+                _job.setReqExperience(job.getReqExperience());
+                _job.setPostTechStack(job.getPostTechStack());
+            }
+        }
+    }
+
+    public void deleteJob(int jobId) {
+        jobs.removeIf(job -> job.getPostId() == jobId);
     }
 }
